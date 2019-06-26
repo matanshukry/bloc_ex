@@ -43,9 +43,9 @@ class _UserPageState extends State<UserPage> {
       bloc: _userBloc,
       listener: (BuildContext context, UserState state) {
         if (state is UserStateLoaded) {
-//          Scaffold.of(context).showSnackBar(SnackBar(
-//            content: Text("Loaded user ${state.info.name} successfully!"),
-//          ));
+          Scaffold.of(context).showSnackBar(SnackBar(
+            content: Text("Loaded user ${state.info.name} successfully!"),
+          ));
         }
       },
       child: BlocBuilder(
