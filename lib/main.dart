@@ -42,13 +42,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProviderTree(
-      blocProviders: [
-        BlocProvider<UserBloc>(
-          builder: (BuildContext context) =>
-              UserBloc(userService: _userService),
-        ),
-      ],
+    return ImmutableProvider(
+      value: _userService,
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
